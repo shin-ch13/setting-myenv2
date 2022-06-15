@@ -1,0 +1,24 @@
+# master playbook
+---
+- hosts: all
+  become: yes
+  gather_facts: yes
+  tasks:
+    - name: debug ansible_facts
+      debug:
+        var: ansible_facts
+    - name: debug ansible_env
+      debug:
+        var: ansible_env
+
+#Ubuntu16 specific tasks
+- import_playbook: ubuntu16.yml
+  when:
+   - ansible_facts["distribution"] == "Ubuntu"
+   - ansible_facts["distribution_major_version"] == "16"
+
+#Ubuntu18 specific tasks
+- import_playbook: ubuntu18.yml
+  when:
+   - ansible_facts["distribution"] == "Ubuntu"
+   - ansible_facts["distribution_major_version"] == "18"

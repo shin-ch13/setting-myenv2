@@ -1,0 +1,11 @@
+#ubuntu16 group master playbook
+---
+
+- hosts: all
+  become: yes
+  roles:
+  - common
+  - vim_ubuntu
+  - zsh_ubuntu
+  - tmux_ubuntu
+  - docker_ubuntu

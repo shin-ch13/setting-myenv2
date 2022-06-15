@@ -1,0 +1,17 @@
+---
+- name: vim requires install by apt
+  apt:
+    name: "{{ packages }}"
+    state: latest
+    update_cache: yes
+  vars:
+    packages:  
+      - git
+      - python
+      - python-apt
+
+- name: Install vim by apt
+  apt:
+    name: vim
+    state: latest
+    update_cache: yes
