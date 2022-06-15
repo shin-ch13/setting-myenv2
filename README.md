@@ -27,7 +27,10 @@ Create mounte Volume
 Create and Start a new instance on multipass
 
 ```shell
-% multipass launch --cpus 2 --disk 50G --mem 4G --name ubuntu
+% multipass launch 18.04 --cpus 2 --disk 50G --mem 4G --name ubuntu --cloud-init - <<EOF
+ssh_authorized_keys:
+  - $(cat ~/.ssh/id_rsa.pub)
+EOF
 % multipass set client.primary-name=ubuntu
 % multipass info ubuntu
 % multipass umount ubuntu
