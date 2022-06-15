@@ -39,6 +39,9 @@ EOF
 
 Setting myenv to instance
 
+* set dotfiles
+* install docker/docker-compose/tmux/zsh/vim package
+
 ```shell
 % cd provisioning/
 % sed -i -e "/ansible_host=/d" inventory/inventory.ini
@@ -61,6 +64,7 @@ Manage an instance on multipass
 ```shell
 % multipass list # List an instance
 % multipass start # Start an instance
+% multipass shell # Use an instance
 % multipass stop # Stop an instance
 % multipass delete # Delete an instance
 % multipass purge # Permanently Remove an instance
