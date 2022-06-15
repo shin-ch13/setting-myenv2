@@ -46,10 +46,11 @@ Setting myenv to instance
 % ansible-playbook site.yml -i ./inventory/inventory.ini
 ```
 
-Use an instance on multipass
+Use an instance (myenv!!!) on multipass
 
 ```shell
 % ssh -i ~/.ssh/id_rsa ubuntu@$(multipass info ubuntu | grep IPv4 | awk '{print $2}')
+Welcome to Ubuntu 18.04.6 LTS (GNU/Linux 4.15.0-184-generic aarch64)
 ```
 
 Manage an instance on multipass
