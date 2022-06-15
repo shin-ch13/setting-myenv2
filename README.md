@@ -51,6 +51,9 @@ Use an instance (myenv!!!) on multipass
 ```shell
 % ssh -i ~/.ssh/id_rsa ubuntu@$(multipass info ubuntu | grep IPv4 | awk '{print $2}')
 Welcome to Ubuntu 18.04.6 LTS (GNU/Linux 4.15.0-184-generic aarch64)
+
+[ubuntu@ubuntu] ~
+%
 ```
 
 Manage an instance on multipass
