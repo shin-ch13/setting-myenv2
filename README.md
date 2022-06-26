@@ -43,6 +43,9 @@ Setting myenv to instance
 * install docker/docker-compose/tmux/zsh/vim package
 
 ```shell
+% ls -a dotfiles
+./          ../         .tmux.conf  .vimrc      .zshrc
+
 % cd provisioning/
 % sed -i -e "/ansible_host=/d" inventory/inventory.ini
 % echo "ansible_host=$(multipass info ubuntu | grep IPv4 | awk '{print $2}')" >> inventory/inventory.ini
